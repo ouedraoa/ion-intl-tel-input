@@ -648,6 +648,7 @@ export class IonIntlTelInputComponent
       'Insert',
       'Delete',
       'Backspace',
+      'Tab',
     ];
 
     if (
