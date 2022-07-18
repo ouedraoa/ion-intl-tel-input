@@ -9,6 +9,7 @@
     [hasVirtualScroll]="true"
     itemTextField="name"
     [items]="countries"
+    [itemIconSlot]="modalItemIconSlot"
     itemValueField="dialCode"
     modalCssClass="ionic-tel-input-modal {{modalCssClass}}"
     placeholder="Country"
@@ -30,12 +31,16 @@
       <span *ngIf="separateDialCode">{{dialCodePrefix}}{{country.dialCode}}</span>
     </ng-template>
     <ng-template ionicSelectableItemTemplate let-country="item">
+      <span class="fi fi-{{country.flagClass}} ion-margin-end"></span>
         <span class="ion-margin-end">{{country.name}}</span>
         <span *ngIf="separateDialCode">{{dialCodePrefix}}{{country.dialCode}}</span>
     </ng-template>
-    <ng-template ionicSelectableItemEndTemplate let-country="item">
-      <span class="fi fi-{{country.flagClass}}"></span>
+    <ng-template ionicSelectableCloseButtonTemplate>
+      <ion-icon name="close-outline"></ion-icon>
     </ng-template>
+    <!-- <ng-template ionicSelectableItemEndTemplate let-country="item">
+      <span class="fi fi-{{country.flagClass}}"></span>
+    </ng-template> -->
   </ionic-selectable>
 </div>
 

@@ -1,6 +1,6 @@
-# Interstellus Ionic International Telephone Input
+# Interstellus Ionic International Telephone Input V2
 
-An Ionic component for International Phone Number Input, that allows all countries, validation with google phone lib, limited countries, preferred countries, virtual scrolling and much more.
+This is an continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
 
 ## Contents
 - [Interstellus Ionic International Telephone Input](#interstellus-ionic-international-telephone-input)
@@ -25,6 +25,7 @@ An Ionic component for International Phone Number Input, that allows all countri
 ## Supported Ionic Versions
 
 - Ionic 4 (>=4.0.0)
+- Ionic 5 (>=5.0.0)
 
 ## Getting Started
 
@@ -254,6 +255,7 @@ export class HomePage implements OnInit {
 | inputPlaceholder          | string   | NULL               | If a custom placeholder is needed for input. If this property is set it will override    `enablePlaceholder`and only this placeholder will be shown. |
 | maxLength                 | string   | 15                 | Maximum Length for input. |
 | modalTitle                | string   | Select Country     | Title of modal opened to select country dial code. |
+| modalItemIconSlot         | string   | start              | Sets the selection icon to either the start or end of the ion-item. |
 | modalCssClass             | string   | NULL               | CSS class to attach to dial code selection modal. |
 | modalSearchPlaceholder    | string   | Enter country name | Placeholder for input in dial code selection modal. |
 | modalCloseText            | string   | Close              | Text for close button in dial code selection modal. |
@@ -291,6 +293,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Azzam Asghar** - *Initial work* - [Azzam Asghar](https://github.com/azzamasghar1)
+* **MillieOfzo** - *Continuation v2* - [](https://github.com/MillieOfzo)
 
 See also the list of [contributors](https://github.com/azzamasghar1/is-ion-intl-tel-input/contributors) who participated in this project.
 

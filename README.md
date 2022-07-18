@@ -1,6 +1,6 @@
-# Interstellus Ionic International Telephone Input
+# Interstellus Ionic International Telephone Input V2
 
-An Ionic component for International Phone Number Input, that allows all countries, validation with google phone lib, limited countries, preferred countries, virtual scrolling and much more.
+This is an continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
 
 ## Contents
 - [Interstellus Ionic International Telephone Input](#interstellus-ionic-international-telephone-input)
@@ -12,6 +12,7 @@ An Ionic component for International Phone Number Input, that allows all countri
     + [Step 3: Add it to template.](#Step-3-Add-it-to-template)
     + [Step 4: Configure it.](#Step-4-Configure-it)
     + [Step 5: Add validation.](#Step-5-Add-validation)
+    + [Step 6: Configure validation.](#Step-6-Configure-validation)
   * [Options](#Options)
   * [Events](#Events)
   * [Contributing](#Contributing)
@@ -24,6 +25,7 @@ An Ionic component for International Phone Number Input, that allows all countri
 ## Supported Ionic Versions
 
 - Ionic 4 (>=4.0.0)
+- Ionic 5 (>=5.0.0)
 
 ## Getting Started
 
@@ -35,7 +37,7 @@ npm install ion-intl-tel-v2 --save
 
 #### Or Install with All dependencies
 ```
-npm install ion-intl-tel-v2 ionic-selectable flag-icon google-libphonenumber --save
+npm install ion-intl-tel-v2 ionic-selectable flag-icons google-libphonenumber --save
 ```
 
 #### Add flag styles
@@ -48,7 +50,7 @@ Add the following to your `styles` array of project in `angular.json` (located i
 
 ### Step 2: Import it.
 
-First, import `IonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
+First, import `IsIonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
 
 ```
 import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
@@ -62,10 +64,10 @@ export class AppModule { }
 
 ```
 
-**Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IonIntlTelInputModule` to each page module too.
+**Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IsIonIntlTelInputModule` to each page module too.
 
 ```
-import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
+import { IonIntlTelInputModule } from 'ionic-selectable';
 import { HomePage } from './home';
 
 @NgModule({
@@ -113,24 +115,10 @@ export class HomePageModule { }
 
 #### a. Usage with Template Driven Forms
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
-
-phone: IonIntlTelInputModel = {
-  dialCode: '+92',
-  internationalNumber: '+92 300 1234567',
-  isoCode: 'pk',
-  nationalNumber: '300 1234567'
-};
-
 @Component({ ... })
 export class HomePage {
 
-  phoneNumber = {
-    dialCode: '+92',
-    internationalNumber: '+92 300 1234567',
-    isoCode: 'pk',
-    nationalNumber: '300 1234567'
-  };
+  phoneNumber = '';
 
   constructor() { }
 }
@@ -138,18 +126,11 @@ export class HomePage {
 
 #### b. Usage with Reactive Forms
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
 
 @Component({ ... })
 export class HomePage implements OnInit {
 
-  phone: IonIntlTelInputModel = {
-    dialCode: '+92',
-    internationalNumber: '+92 300 1234567',
-    isoCode: 'pk',
-    nationalNumber: '300 1234567'
-  };
-  formValue = {phoneNumber: this.phone};
+  formValue = {phoneNumber: '', test: ''};
   form: FormGroup;
 
   constructor() { }
@@ -218,21 +199,27 @@ export class HomePage implements OnInit {
 </form>
 ```
 
-And in your `.ts` file:
+### Step 6: Configure validation.
+
+#### a. Usage with Template Driven Forms
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
-import { IonIntlTelInputValidators } from 'ion-intl-tel-v2';
+@Component({ ... })
+export class HomePage {
+
+  phoneNumber = '';
+
+  constructor() { }
+}
+```
+
+#### b. Usage with Reactive Forms
+```
+import { IonIntlTelInputValidators } from 'is-ion-intl-tel-input';
 
 @Component({ ... })
 export class HomePage implements OnInit {
 
-  phone: IonIntlTelInputModel = {
-    dialCode: '+92',
-    internationalNumber: '+92 300 1234567',
-    isoCode: 'pk',
-    nationalNumber: '300 1234567'
-  };
-  formValue = {phoneNumber: this.phone};
+  formValue = {phoneNumber: '', test: ''};
   form: FormGroup;
 
   constructor() { }
@@ -268,6 +255,7 @@ export class HomePage implements OnInit {
 | inputPlaceholder          | string   | NULL               | If a custom placeholder is needed for input. If this property is set it will override    `enablePlaceholder`and only this placeholder will be shown. |
 | maxLength                 | string   | 15                 | Maximum Length for input. |
 | modalTitle                | string   | Select Country     | Title of modal opened to select country dial code. |
+| modalItemIconSlot         | string   | start              | Sets the selection icon to either the start or end of the ion-item. |
 | modalCssClass             | string   | NULL               | CSS class to attach to dial code selection modal. |
 | modalSearchPlaceholder    | string   | Enter country name | Placeholder for input in dial code selection modal. |
 | modalCloseText            | string   | Close              | Text for close button in dial code selection modal. |
@@ -305,6 +293,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Azzam Asghar** - *Initial work* - [Azzam Asghar](https://github.com/azzamasghar1)
+* **MillieOfzo** - *Continuation v2* - [](https://github.com/MillieOfzo)
 
 See also the list of [contributors](https://github.com/azzamasghar1/is-ion-intl-tel-input/contributors) who participated in this project.
 
@@ -317,6 +306,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 This project would never have been possible without the following great plugins:
 * [Ionic Selectable](https://github.com/eakoriakin/ionic-selectable) by [@eakoriakin](https://github.com/eakoriakin) 
 * [International Telephone Input for Angular (NgxIntlTelInput)](https://github.com/webcat12345/ngx-intl-tel-input) by [@webcat12345](https://github.com/webcat12345)
-* [flag-icons](https://github.com/lipis/flag-icons) by [@lipis](https://github.com/lipis)
+* [flag-icon-css](https://github.com/lipis/flag-icon-css) by [@lipis](https://github.com/lipis)
 
 So please do go ahead and give them a star for their efforts.

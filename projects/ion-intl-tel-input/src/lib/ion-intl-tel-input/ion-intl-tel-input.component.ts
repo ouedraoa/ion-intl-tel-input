@@ -236,6 +236,16 @@ export class IonIntlTelInputComponent
   modalSearchFailText = 'No countries found';
 
   /**
+   * Item icon slot.
+   * See more on.
+   *
+   * @default 'start'
+   * @memberof IonIntlTelInputComponent
+   */
+  @Input()
+  modalItemIconSlot = 'start';
+
+  /**
    * List of iso codes of manually selected countries as string, which will appear in the dropdown.
    * **Note**: `onlyCountries` should be a string array of country iso codes.
    * See more on.
@@ -498,6 +508,7 @@ export class IonIntlTelInputComponent
       }
 
       this.emitValueChange({
+        e164Number: this.dialCodePrefix + this.country.dialCode + this.phoneNumber,
         internationalNumber: internationallNo,
         nationalNumber: nationalNo,
         isoCode: this.country.isoCode,
@@ -564,6 +575,7 @@ export class IonIntlTelInputComponent
     }
     if (this.country) {
       this.emitValueChange({
+        e164Number: this.dialCodePrefix + this.country.dialCode + this.phoneNumber,
         internationalNumber:
           this.dialCodePrefix + this.country.dialCode + ' ' + this.phoneNumber,
         nationalNumber: this.phoneNumber,
@@ -614,6 +626,7 @@ export class IonIntlTelInputComponent
       }
 
       this.emitValueChange({
+        e164Number: this.dialCodePrefix + this.country.dialCode + this.phoneNumber,
         internationalNumber: internationallNo,
         nationalNumber: nationalNo,
         isoCode: this.country.isoCode,

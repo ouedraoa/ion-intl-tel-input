@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.11",
   "name": "ion-intl-tel-v2",
   "title": "Ion Intl Tel v2",
   "description": "An Ionic component for International Phone Number Input, that allows all countries, validation with google phone lib, limited countries, preferred countries, virtual scrolling and much more.",
