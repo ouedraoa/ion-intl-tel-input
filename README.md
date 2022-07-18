@@ -35,14 +35,14 @@ npm install ion-intl-tel-input --save
 
 #### Or Install with All dependencies
 ```
-npm install ion-intl-tel-input ionic-selectable flag-icon-css google-libphonenumber --save
+npm install ion-intl-tel-input ionic-selectable flag-icon google-libphonenumber --save
 ```
 
 #### Add flag styles
 Add the following to your `styles` array of project in `angular.json` (located in projects root directory).
 ```
 {
-  "input": "node_modules/flag-icon-css/sass/flag-icon.scss"
+  "input": "node_modules/flag-icons/sass/flag-icon.scss"
 }
 ```
 
@@ -317,6 +317,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 This project would never have been possible without the following great plugins:
 * [Ionic Selectable](https://github.com/eakoriakin/ionic-selectable) by [@eakoriakin](https://github.com/eakoriakin) 
 * [International Telephone Input for Angular (NgxIntlTelInput)](https://github.com/webcat12345/ngx-intl-tel-input) by [@webcat12345](https://github.com/webcat12345)
-* [flag-icon-css](https://github.com/lipis/flag-icon-css) by [@lipis](https://github.com/lipis)
+* [flag-icons](https://github.com/lipis/flag-icons) by [@lipis](https://github.com/lipis)
 
 So please do go ahead and give them a star for their efforts.
