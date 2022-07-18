@@ -30,12 +30,12 @@ An Ionic component for International Phone Number Input, that allows all countri
 ### Step 1: Install it.
 #### Install Independently
 ```
-npm install ion-intl-tel --save
+npm install ion-intl-tel-v2 --save
 ```
 
 #### Or Install with All dependencies
 ```
-npm install ion-intl-tel ionic-selectable flag-icon google-libphonenumber --save
+npm install ion-intl-tel-v2 ionic-selectable flag-icon google-libphonenumber --save
 ```
 
 #### Add flag styles
@@ -51,7 +51,7 @@ Add the following to your `styles` array of project in `angular.json` (located i
 First, import `IonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
 
 ```
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
 
 @NgModule({
   imports: [
@@ -65,7 +65,7 @@ export class AppModule { }
 **Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IonIntlTelInputModule` to each page module too.
 
 ```
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
 import { HomePage } from './home';
 
 @NgModule({
@@ -113,7 +113,7 @@ export class HomePageModule { }
 
 #### a. Usage with Template Driven Forms
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-input';
+import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
 
 phone: IonIntlTelInputModel = {
   dialCode: '+92',
@@ -138,7 +138,7 @@ export class HomePage {
 
 #### b. Usage with Reactive Forms
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-input';
+import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
 
 @Component({ ... })
 export class HomePage implements OnInit {
@@ -220,8 +220,8 @@ export class HomePage implements OnInit {
 
 And in your `.ts` file:
 ```
-import { IonIntlTelInputModel } from 'ion-intl-tel-input';
-import { IonIntlTelInputValidators } from 'is-ion-intl-tel-input';
+import { IonIntlTelInputModel } from 'ion-intl-tel-v2';
+import { IonIntlTelInputValidators } from 'ion-intl-tel-v2';
 
 @Component({ ... })
 export class HomePage implements OnInit {

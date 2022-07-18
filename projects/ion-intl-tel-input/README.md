@@ -31,19 +31,19 @@ An Ionic component for International Phone Number Input, that allows all countri
 ### Step 1: Install it.
 #### Install Independently
 ```
-npm install ion-intl-tel-input --save
+npm install ion-intl-tel-v2 --save
 ```
 
 #### Or Install with All dependencies
 ```
-npm install ion-intl-tel-input ionic-selectable flag-icon-css google-libphonenumber --save
+npm install ion-intl-tel-v2 ionic-selectable flag-icons google-libphonenumber --save
 ```
 
 #### Add flag styles
 Add the following to your `styles` array of project in `angular.json` (located in projects root directory).
 ```
 {
-  "input": "node_modules/flag-icon-css/sass/flag-icon.scss"
+  "input": "node_modules/flag-icons/sass/flag-icon.scss"
 }
 ```
 
@@ -52,7 +52,7 @@ Add the following to your `styles` array of project in `angular.json` (located i
 First, import `IsIonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
 
 ```
-import { IonIntlTelInputModule } from 'ion-intl-tel-input';
+import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
 
 @NgModule({
   imports: [

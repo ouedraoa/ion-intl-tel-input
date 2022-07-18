@@ -1,7 +1,7 @@
 {
-  "version": "1.0.5",
-  "name": "ion-intl-tel-input",
-  "title": "Ion Intl Tel Input",
+  "version": "1.0.7",
+  "name": "ion-intl-tel-v2",
+  "title": "Ion Intl Tel tel v2",
   "description": "An Ionic component for International Phone Number Input, that allows all countries, validation with google phone lib, limited countries, preferred countries, virtual scrolling and much more.",
   "author": {
     "name": "Azzam Asghar",
@@ -21,7 +21,9 @@
     "ionic 2",
     "ionic 3",
     "ionic 4",
+    "ionic 5",
     "ion-intl-tel-input",
+    "ion-intl-tel-v2",
     "intl tel input",
     "intl",
     "tel",
@@ -34,9 +36,9 @@
     "elktech"
   ],
   "peerDependencies": {
-    "ionic-selectable": "^4.5.2",
-    "google-libphonenumber": "^3.2.6",
-    "flag-icon-css": "^3.4.5"
+    "google-libphonenumber": "^3.2.29",
+    "ionic-selectable": "^4.9.0",
+    "flag-icons": "^6.6.4"
   },
   "devDependencies": {
     "@types/google-libphonenumber": "^7.4.17"
