@@ -1,6 +1,10 @@
 # Interstellus Ionic International Telephone Input V2
+<!-- 
+[![Build Status](https://travis-ci.org/webcat12345/ngx-intl-tel-input.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-intl-tel-input)  -->
+[![npm version](https://badge.fury.io/js/ion-intl-tel-v2.svg)](https://badge.fury.io/js/ion-intl-tel-v2)
+[![npm](https://img.shields.io/npm/dm/ion-intl-tel-v2)](https://www.npmjs.com/package/ion-intl-tel-v2)
 
-This is an continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
+This is a continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
 
 ## Contents
 - [Interstellus Ionic International Telephone Input](#interstellus-ionic-international-telephone-input)
@@ -42,7 +46,7 @@ npm install ion-intl-tel-v2 ionic-selectable flag-icons google-libphonenumber --
 
 #### Add flag styles
 Add the following to your `styles` array of project in `angular.json` (located in projects root directory).
-```
+```json
 {
   "input": "node_modules/flag-icons/sass/flag-icons.scss"
 }
@@ -52,7 +56,7 @@ Add the following to your `styles` array of project in `angular.json` (located i
 
 First, import `IsIonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
 
-```
+```typescript
 import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
 
 @NgModule({
@@ -66,7 +70,7 @@ export class AppModule { }
 
 **Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IsIonIntlTelInputModule` to each page module too.
 
-```
+```typescript
 import { IonIntlTelInputModule } from 'ionic-selectable';
 import { HomePage } from './home';
 
@@ -85,7 +89,7 @@ export class HomePageModule { }
 ### Step 3: Add it to template.
 
 #### a. Usage with Template Driven Forms
-```
+```html
 <form>
   <ion-item>
     <ion-label position="stacked">Tel Input</ion-label>
@@ -100,7 +104,7 @@ export class HomePageModule { }
 ```
 
 #### b. Usage with Reactive Forms
-```
+```html
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <ion-item>
     <ion-label position="floating">Tel Input</ion-label>
@@ -114,7 +118,7 @@ export class HomePageModule { }
 ### Step 4: Configure it.
 
 #### a. Usage with Template Driven Forms
-```
+```typescript
 @Component({ ... })
 export class HomePage {
 
@@ -125,8 +129,7 @@ export class HomePage {
 ```
 
 #### b. Usage with Reactive Forms
-```
-
+```typescript
 @Component({ ... })
 export class HomePage implements OnInit {
 
@@ -154,7 +157,7 @@ export class HomePage implements OnInit {
 ### Step 5: Add validation.
 
 #### a. Usage with Template Driven Forms
-```
+```html
 <form>
   <ion-item>
     <ion-label position="stacked">Tel Input</ion-label>
@@ -179,7 +182,7 @@ export class HomePage implements OnInit {
 ```
 
 #### b. Usage with Reactive Forms
-```
+```html
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <ion-item>
     <ion-label position="floating">Tel Input</ion-label>
@@ -202,7 +205,7 @@ export class HomePage implements OnInit {
 ### Step 6: Configure validation.
 
 #### a. Usage with Template Driven Forms
-```
+```typescript
 @Component({ ... })
 export class HomePage {
 
@@ -213,7 +216,7 @@ export class HomePage {
 ```
 
 #### b. Usage with Reactive Forms
-```
+```typescript
 import { IonIntlTelInputValidators } from 'is-ion-intl-tel-input';
 
 @Component({ ... })
@@ -306,6 +309,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 This project would never have been possible without the following great plugins:
 * [Ionic Selectable](https://github.com/eakoriakin/ionic-selectable) by [@eakoriakin](https://github.com/eakoriakin) 
 * [International Telephone Input for Angular (NgxIntlTelInput)](https://github.com/webcat12345/ngx-intl-tel-input) by [@webcat12345](https://github.com/webcat12345)
-* [flag-icon-css](https://github.com/lipis/flag-icon-css) by [@lipis](https://github.com/lipis)
+* [flag-icons](https://github.com/lipis/flag-icons) by [@lipis](https://github.com/lipis)
 
 So please do go ahead and give them a star for their efforts.
