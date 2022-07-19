@@ -54,7 +54,7 @@ Add the following to your `styles` array of project in `angular.json` (located i
 
 ### Step 2: Import it.
 
-First, import `IsIonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
+First, import `IonIntlTelInputModule` to your `app.module.ts` that is normally located in `src\app\app.module.ts`.
 
 ```typescript
 import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
@@ -68,10 +68,10 @@ export class AppModule { }
 
 ```
 
-**Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IsIonIntlTelInputModule` to each page module too.
+**Note:** Additionally, if you are using lazy loaded pages. Check if your pages have a module file, for example, `home.module.ts`, and if they do then import `IonIntlTelInputModule` to each page module too.
 
 ```typescript
-import { IonIntlTelInputModule } from 'ionic-selectable';
+import { IonIntlTelInputModule } from 'ion-intl-tel-v2';
 import { HomePage } from './home';
 
 @NgModule({
@@ -217,7 +217,7 @@ export class HomePage {
 
 #### b. Usage with Reactive Forms
 ```typescript
-import { IonIntlTelInputValidators } from 'is-ion-intl-tel-input';
+import { IonIntlTelInputValidators } from 'ion-intl-tel-v2';
 
 @Component({ ... })
 export class HomePage implements OnInit {
@@ -296,9 +296,9 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Azzam Asghar** - *Initial work* - [Azzam Asghar](https://github.com/azzamasghar1)
-* **MillieOfzo** - *Continuation v2* - [](https://github.com/MillieOfzo)
+* **MillieOfzo** - *Continuation v2* - [MillieOfzo](https://github.com/MillieOfzo)
 
-See also the list of [contributors](https://github.com/azzamasghar1/is-ion-intl-tel-input/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/MillieOfzo/is-ion-intl-tel-input/contributors) who participated in this project.
 
 ## License
 
