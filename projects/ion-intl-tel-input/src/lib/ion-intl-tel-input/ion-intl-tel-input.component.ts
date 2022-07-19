@@ -158,6 +158,17 @@ export class IonIntlTelInputComponent
   modalTitle = 'Select Country';
 
   /**
+   * Placeholder for the select dropdown
+   * See more on.
+   *
+   * @default 'Country'
+   * @memberof IonIntlTelInputComponent
+   */
+   @Input()
+   dropdownPlaceholder = 'Country';
+
+  
+  /**
    * CSS class to attach to dial code selectionmodal.
    * See more on.
    *

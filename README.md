@@ -271,6 +271,7 @@ export class HomePage implements OnInit {
 | fallbackPlaceholder       | string   | NULL               | A fallaback placeholder to be used if no example number is found for a country. |
 | inputPlaceholder          | string   | NULL               | If a custom placeholder is needed for input. If this property is set it will override    `enablePlaceholder`and only this placeholder will be shown. |
 | maxLength                 | string   | 15                 | Maximum Length for input. |
+| dropdownPlaceholder       | string   | Country            | Placeholder for the select dropdown. |
 | modalTitle                | string   | Select Country     | Title of modal opened to select country dial code. |
 | modalItemIconSlot         | string   | start              | Sets the selection icon to either the start or end of the ion-item. |
 | modalCssClass             | string   | NULL               | CSS class to attach to dial code selection modal. |

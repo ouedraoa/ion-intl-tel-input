@@ -27,6 +27,7 @@ export class HomePage implements OnInit {
   fallbackPlaceholder = "";
   inputPlaceholder = "";
   maxLength = "15";
+  dropdownPlaceholder = 'Land'
   modalTitle = "Select Country";
   modalCssClass = "";
   modalSearchPlaceholder = "Enter country name";
