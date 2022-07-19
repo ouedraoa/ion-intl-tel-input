@@ -1,42 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-
-import { IonIntlTelInputValidators } from 'ion-intl-tel-input';
-import { IonIntlTelInputModel } from 'ion-intl-tel-input';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { TranslateService } from "@ngx-translate/core";
+import { translationPrefix } from "projects/ion-intl-tel-input/src/lib/data";
+import { IonIntlTelInputModel, IonIntlTelInputValidators } from "projects/ion-intl-tel-input/src/public-api";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: "app-home",
+  templateUrl: "home.page.html",
+  styleUrls: ["home.page.scss"],
 })
 export class HomePage implements OnInit {
-
   phone: IonIntlTelInputModel = {
-    e164Number: '+923001234567',
-    dialCode: '+92',
-    internationalNumber: '+92 300 1234567',
-    isoCode: 'pk',
-    nationalNumber: '300 1234567'
+    e164Number: "+31104122467",
+    dialCode: "+31",
+    internationalNumber: "+31 10 412 2467",
+    isoCode: "nl",
+    nationalNumber: "010 412 2467",
   };
-  formValue = {phoneNumber: this.phone, test: ''};
+  formValue = { phoneNumber: this.phone, test: "" };
   form: FormGroup;
 
-  defaultCountryIsoTest = 'pk';
-  dialCodePrefix = '+';
+  defaultCountryIsoTest = "nl";
+  dialCodePrefix = "+";
   enableAutoCountrySelect = false;
   enablePlaceholder = true;
-  fallbackPlaceholder = '';
-  inputPlaceholder = '';
-  maxLength = '15';
-  modalTitle = 'Select Country';
-  modalCssClass = '';
-  modalSearchPlaceholder = 'Enter country name';
-  modalCloseText = 'Close';
-  modalCloseButtonSlot = 'end';
+  fallbackPlaceholder = "";
+  inputPlaceholder = "";
+  maxLength = "15";
+  modalTitle = "Select Country";
+  modalCssClass = "";
+  modalSearchPlaceholder = "Enter country name";
+  modalCloseText = "Close";
+  modalCloseButtonSlot = "end";
   modalCanSearch = true;
   modalShouldBackdropClose = true;
   modalShouldFocusSearchbar = true;
-  modalSearchFailText = 'No countries found.';
+  modalSearchFailText = "No countries found.";
+  modalItemIconSlot = "end";
   onlyCountries = [];
   preferredCountries = [];
   selectFirstCountry = true;
@@ -44,17 +44,26 @@ export class HomePage implements OnInit {
 
   disableTest = false;
 
-  constructor() { }
+  translationPrefix = `${translationPrefix}.`;
+
+  constructor(translate: TranslateService) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    // translate.setDefaultLang("nl");
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use("nl");
+
+  }
 
   ngOnInit() {
     this.form = new FormGroup({
-      phoneNumber: new FormControl({
-        value: /* null */this.formValue.phoneNumber,
-        disabled: this.disableTest
-      }, [
-        Validators.required,
-        IonIntlTelInputValidators.phone
-      ])
+      phoneNumber: new FormControl(
+        {
+          value: /* null */ this.formValue.phoneNumber,
+          disabled: this.disableTest,
+        },
+        [Validators.required, IonIntlTelInputValidators.phone]
+      ),
     });
   }
 
@@ -62,11 +71,12 @@ export class HomePage implements OnInit {
     console.log(this.phone);
   }
 
-  get phoneNumber() { return this.form.get('phoneNumber'); }
+  get phoneNumber() {
+    return this.form.get("phoneNumber");
+  }
 
   onSubmit() {
     console.log(this.phoneNumber);
     console.log(this.phoneNumber.value);
   }
-
 }
