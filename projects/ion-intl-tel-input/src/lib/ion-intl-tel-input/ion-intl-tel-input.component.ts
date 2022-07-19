@@ -503,12 +503,16 @@ export class IonIntlTelInputComponent
         ? this.phoneUtil.format(googleNumber, PhoneNumberFormat.NATIONAL)
         : '';
 
+        const e164Number = googleNumber
+        ? this.phoneUtil.format(googleNumber, PhoneNumberFormat.E164)
+        : '';
+
       if (this.separateDialCode && internationallNo) {
         this.phoneNumber = this.removeDialCode(internationallNo);
       }
 
       this.emitValueChange({
-        e164Number: this.dialCodePrefix + this.country.dialCode + this.phoneNumber,
+        e164Number: e164Number,
         internationalNumber: internationallNo,
         nationalNumber: nationalNo,
         isoCode: this.country.isoCode,
@@ -621,12 +625,16 @@ export class IonIntlTelInputComponent
         ? this.phoneUtil.format(googleNumber, PhoneNumberFormat.NATIONAL)
         : '';
 
+        const e164Number = googleNumber
+        ? this.phoneUtil.format(googleNumber, PhoneNumberFormat.E164)
+        : '';
+
       if (this.separateDialCode && internationallNo) {
         this.phoneNumber = this.removeDialCode(internationallNo);
       }
 
       this.emitValueChange({
-        e164Number: this.dialCodePrefix + this.country.dialCode + this.phoneNumber,
+        e164Number: e164Number,
         internationalNumber: internationallNo,
         nationalNumber: nationalNo,
         isoCode: this.country.isoCode,

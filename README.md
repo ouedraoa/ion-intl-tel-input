@@ -44,7 +44,7 @@ npm install ion-intl-tel-v2 ionic-selectable flag-icons google-libphonenumber --
 Add the following to your `styles` array of project in `angular.json` (located in projects root directory).
 ```
 {
-  "input": "node_modules/flag-icons/sass/flag-icon.scss"
+  "input": "node_modules/flag-icons/sass/flag-icons.scss"
 }
 ```
 

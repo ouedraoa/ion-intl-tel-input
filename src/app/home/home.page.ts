@@ -12,6 +12,7 @@ import { IonIntlTelInputModel } from 'ion-intl-tel-input';
 export class HomePage implements OnInit {
 
   phone: IonIntlTelInputModel = {
+    e164Number: '+923001234567',
     dialCode: '+92',
     internationalNumber: '+92 300 1234567',
     isoCode: 'pk',
