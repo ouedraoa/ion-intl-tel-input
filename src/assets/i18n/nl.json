@@ -1,0 +1,14 @@
+{
+  "template_driven_forms":"Template driven forms",
+  "ngx-intl-tel-input-country": {
+    "af": "Afghanistan (افغانستان)",
+    "al": "Albanië (Shqipëri)",
+    "dz": "Algerije (الجزائر)",
+    "as": "Amerikaans Samoa",
+    "ad": "Andorra",
+    "ao": "Angola",
+    "ai": "Anguilla",
+    "ag": "Antigua en Barbuda",
+    "ar": "Argentinië"
+  }
+}

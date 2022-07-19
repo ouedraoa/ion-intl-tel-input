@@ -17,6 +17,7 @@ This is a continuation of the original project from azzamasghar1 (https://github
     + [Step 4: Configure it.](#Step-4-Configure-it)
     + [Step 5: Add validation.](#Step-5-Add-validation)
     + [Step 6: Configure validation.](#Step-6-Configure-validation)
+  * [Translation support](#Translation-support)
   * [Options](#Options)
   * [Events](#Events)
   * [Contributing](#Contributing)
@@ -245,6 +246,19 @@ export class HomePage implements OnInit {
   }
 }
 ```
+
+### Translation support
+ create .json file in your app in assets/i18n/{lang}.json. That file should have following structure:
+ ```json
+ {
+ "ngx-intl-tel-input-country": {
+    "nl": "Nederland"
+    ...
+    }
+ }
+ ```
+  Fill in translations. Key - iso code ("nl"), and value - translation for country ("Nederland")).
+  If translation is missing English version is used.
 
 ## Options
 

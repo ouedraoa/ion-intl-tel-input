@@ -32,6 +32,8 @@ import { IonIntlTelInputModel } from '../models/ion-intl-tel-input.model';
 import { IonIntlTelInputService } from '../ion-intl-tel-input.service';
 // import { ionIntlTelInputValidator } from '../ion-intl-tel-input.directive';
 import { raf } from '../util/util';
+import { translationPrefix } from '../data';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * @ignore
@@ -370,13 +372,16 @@ export class IonIntlTelInputComponent
   disabled = false;
   phoneUtil: any = PhoneNumberUtil.getInstance();
 
+  translationPrefix = `${translationPrefix}.`;
+
   onTouched: () => void = () => {};
   propagateChange = (_: IonIntlTelInputModel | null) => {};
 
   constructor(
     private el: ElementRef,
     private platform: Platform,
-    private ionIntlTelInputService: IonIntlTelInputService
+    private ionIntlTelInputService: IonIntlTelInputService,
+    private translate: TranslateService
   ) {}
 
   get value(): IonIntlTelInputModel | null {
@@ -708,8 +713,8 @@ export class IonIntlTelInputComponent
     return matchedCountry;
   }
 
-  private fetchAllCountries() {
-    this.countries = this.ionIntlTelInputService.getListOfCountries();
+  private async fetchAllCountries() {
+    this.countries =  this.ionIntlTelInputService.getListOfCountries();
   }
 
   private getCountryByIsoCode(isoCode: string): CountryI {
