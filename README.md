@@ -1,6 +1,10 @@
 # Interstellus Ionic International Telephone Input V2
+<!-- 
+[![Build Status](https://travis-ci.org/webcat12345/ngx-intl-tel-input.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-intl-tel-input)  -->
+[![npm version](https://badge.fury.io/js/ion-intl-tel-v2.svg)](https://badge.fury.io/js/ion-intl-tel-v2)
+[![npm](https://img.shields.io/npm/dm/ion-intl-tel-v2)](https://www.npmjs.com/package/ion-intl-tel-v2)
 
-This is an continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
+This is a continuation of the original project from azzamasghar1 (https://github.com/azzamasghar1/ion-intl-tel-input) which includes new features and some much requested features
 
 ## Contents
 - [Interstellus Ionic International Telephone Input](#interstellus-ionic-international-telephone-input)
