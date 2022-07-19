@@ -1,27 +1,27 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
+import { IonicModule } from "@ionic/angular";
 
-
-import { IonIntlTelInputModule } from 'projects/ion-intl-tel-input/src/lib/ion-intl-tel-input.module';
-import { HomePage } from './home.page';
+import { SharedModule } from "../shared.module";
+import { HomePage } from "./home.page";
 
 @NgModule({
   imports: [
     CommonModule,
+    IonicModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    IonicModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomePage
-      }
+        path: "",
+        component: HomePage,
+      },
     ]),
-    IonIntlTelInputModule
+    SharedModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
