@@ -23,7 +23,7 @@ export class HomePage implements OnInit {
   defaultCountryIsoTest = "nl";
   dialCodePrefix = "+";
   enableAutoCountrySelect = false;
-  enablePlaceholder = true;
+  enablePlaceholder = false;
   fallbackPlaceholder = "";
   inputPlaceholder = "";
   maxLength = "15";
