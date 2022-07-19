@@ -167,7 +167,6 @@ export class IonIntlTelInputComponent
    @Input()
    dropdownPlaceholder = 'Country';
 
-  
   /**
    * CSS class to attach to dial code selectionmodal.
    * See more on.
