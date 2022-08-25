@@ -269,7 +269,7 @@ export class IonIntlTelInputComponent
   onlyCountries: Array<string> = [];
 
   /**
-   * List of iso codesn as string of  countries, which will appear at the top in dial code selection modal.
+   * List of iso codes as string of  countries, which will appear at the top in dial code selection modal.
    * **Note**: `preferredCountries` should be a string array of country iso codes.
    * See more on.
    *

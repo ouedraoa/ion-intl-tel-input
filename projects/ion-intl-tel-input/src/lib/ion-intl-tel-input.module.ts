@@ -11,8 +11,8 @@ import {
   TranslateLoader,
   TranslateModule
 } from "@ngx-translate/core";
-import { createTranslateLoader } from "./create-translate-loader.function";
-import { CustomMissingTranslationHandler } from "./custom-missing-translation-handler.class";
+import { createTranslateLoader } from "./util/create-translate-loader.function";
+import { CustomMissingTranslationHandler } from "./util/custom-missing-translation-handler.class";
 import {
   IonIntlTelInputValidatorDirective
 } from "./ion-intl-tel-input.directive";

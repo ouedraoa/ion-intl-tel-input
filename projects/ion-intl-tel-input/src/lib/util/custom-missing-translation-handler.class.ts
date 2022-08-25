@@ -1,5 +1,5 @@
 import { MissingTranslationHandler, MissingTranslationHandlerParams } from "@ngx-translate/core";
-import { defaultCountryTranslations, translationPrefix } from "./data";
+import { defaultCountryTranslations, translationPrefix } from "../data";
 
 export class CustomMissingTranslationHandler implements MissingTranslationHandler {
   handle(params: MissingTranslationHandlerParams) {
